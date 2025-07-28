@@ -71,7 +71,7 @@ class translate : AppCompatActivity() {
 
     fun setCopy(){
         copy.setOnClickListener {
-            val clipboard = getSyegstemService(CLIPBOARD_SERVICE) as ClipboardManager //Cast
+            val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager //Cast
             val clip = ClipData.newPlainText("label", output.text.toString())
             clipboard.setPrimaryClip(clip)
             Toast.makeText(this, "Copied", Toast.LENGTH_SHORT).show()
